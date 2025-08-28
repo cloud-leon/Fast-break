@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Text
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 from typing import List, Optional
@@ -68,7 +68,7 @@ def get_db():
         db.close()
 
 @app.post("/score", response_model=ScoreResponse)
-async def save_score(score: ScoreCreate, db: SessionLocal = next(get_db())):
+async def save_score(score: ScoreCreate, db = Depends(get_db)):
     """Save a player's score"""
     db_score = Score(
         player_id=score.player_id,
@@ -85,7 +85,7 @@ async def save_score(score: ScoreCreate, db: SessionLocal = next(get_db())):
 async def get_leaderboard(
     game_type: str = "fast_break",
     limit: int = 10,
-    db: SessionLocal = next(get_db())
+    db = Depends(get_db)
 ):
     """Get top scores for a specific game type"""
     scores = db.query(Score)\

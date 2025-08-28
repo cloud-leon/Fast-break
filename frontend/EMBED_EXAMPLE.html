@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Break Game - Embed Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .game-embed {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .embed-code {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏀 Fast Break Basketball Game</h1>
+            <p>Embed this game on your basketball training website!</p>
+        </div>
+        
+        <div class="instructions">
+            <h2>📋 How to Embed</h2>
+            <p>Copy the code below and paste it into your website to embed the Fast Break game:</p>
+        </div>
+        
+        <div class="embed-code">
+&lt;!-- Fast Break Basketball Game Embed --&gt;
+&lt;div style="width: 100%; max-width: 800px; margin: 0 auto;"&gt;
+    &lt;iframe 
+        src="http://localhost:3000/games/fast-break" 
+        width="100%" 
+        height="600" 
+        frameborder="0" 
+        scrolling="no"
+        style="border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+        </div>
+        
+        <div class="game-embed">
+            <h3 style="padding: 20px; margin: 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                🎮 Live Preview
+            </h3>
+            <!-- This is where the game would be embedded -->
+            <div style="padding: 40px; text-align: center; color: #64748b;">
+                <div style="font-size: 48px; margin-bottom: 16px;">🏀</div>
+                <h3>Game Preview</h3>
+                <p>Run the Next.js app to see the live game here!</p>
+                <p><strong>npm run dev</strong> in the frontend directory</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>🚀 Features</h2>
+            <ul>
+                <li><strong>Responsive Design</strong> - Works on all screen sizes</li>
+                <li><strong>Self-Contained</strong> - No external dependencies</li>
+                <li><strong>Customizable</strong> - Easy to style and modify</li>
+                <li><strong>Mobile Friendly</strong> - Touch controls included</li>
+                <li><strong>Leaderboard</strong> - Track player scores</li>
+            </ul>
+        </div>
+        
+        <div class="instructions">
+            <h2>⚙️ Customization</h2>
+            <p>You can customize the game by:</p>
+            <ul>
+                <li>Adjusting the iframe dimensions</li>
+                <li>Adding custom CSS styling</li>
+                <li>Modifying the game component</li>
+                <li>Integrating with your own backend</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
